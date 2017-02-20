@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		089A0C891E5B3898009A94EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C881E5B3898009A94EE /* AppDelegate.swift */; };
-		089A0C8B1E5B3898009A94EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C8A1E5B3898009A94EE /* ViewController.swift */; };
+		089A0C8B1E5B3898009A94EE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C8A1E5B3898009A94EE /* MainVC.swift */; };
 		089A0C8E1E5B3898009A94EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089A0C8C1E5B3898009A94EE /* Main.storyboard */; };
 		089A0C911E5B3898009A94EE /* grability.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C8F1E5B3898009A94EE /* grability.xcdatamodeld */; };
 		089A0C931E5B3898009A94EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089A0C921E5B3898009A94EE /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		089A0C851E5B3898009A94EE /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089A0C881E5B3898009A94EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		089A0C8A1E5B3898009A94EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		089A0C8A1E5B3898009A94EE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		089A0C8D1E5B3898009A94EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089A0C901E5B3898009A94EE /* grability.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = grability.xcdatamodel; sourceTree = "<group>"; };
 		089A0C921E5B3898009A94EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				089A0C881E5B3898009A94EE /* AppDelegate.swift */,
-				089A0C8A1E5B3898009A94EE /* ViewController.swift */,
+				089A0C8A1E5B3898009A94EE /* MainVC.swift */,
 				089A0C8C1E5B3898009A94EE /* Main.storyboard */,
 				089A0C921E5B3898009A94EE /* Assets.xcassets */,
 				089A0C941E5B3898009A94EE /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089A0C911E5B3898009A94EE /* grability.xcdatamodeld in Sources */,
-				089A0C8B1E5B3898009A94EE /* ViewController.swift in Sources */,
+				089A0C8B1E5B3898009A94EE /* MainVC.swift in Sources */,
 				089A0C891E5B3898009A94EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
