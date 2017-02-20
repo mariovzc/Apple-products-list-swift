@@ -9,11 +9,11 @@
 import UIKit
 
 class iPadCellVC: UIViewController {
-
+    let feed  = FeedData()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        feed.updateInfo()
     }
 
     override func didReceiveMemoryWarning() {

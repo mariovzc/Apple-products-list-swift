@@ -8,5 +8,5 @@ target 'grability' do
 
   # Pods for grability
 pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'master'
-
+pod 'SwiftyJSON'
 end
