@@ -6,5 +6,5 @@ target 'grability' do
   use_frameworks!
 
   # Pods for grability
-  pod 'AFNetworking', '~> 3.0'
+  pod 'Alamofire'
 end
