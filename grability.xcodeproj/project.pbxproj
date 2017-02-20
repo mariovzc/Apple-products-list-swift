@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		089A0C891E5B3898009A94EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C881E5B3898009A94EE /* AppDelegate.swift */; };
-		089A0C8B1E5B3898009A94EE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C8A1E5B3898009A94EE /* MainVC.swift */; };
-		089A0C8E1E5B3898009A94EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089A0C8C1E5B3898009A94EE /* Main.storyboard */; };
 		089A0C911E5B3898009A94EE /* grability.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089A0C8F1E5B3898009A94EE /* grability.xcdatamodeld */; };
 		089A0C931E5B3898009A94EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089A0C921E5B3898009A94EE /* Assets.xcassets */; };
 		089A0C961E5B3898009A94EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089A0C941E5B3898009A94EE /* LaunchScreen.storyboard */; };
@@ -17,14 +15,14 @@
 		089A0CB81E5B446C009A94EE /* iPhoneListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A0CB61E5B446C009A94EE /* iPhoneListVC.xib */; };
 		089A0CBD1E5B44C3009A94EE /* iPadCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0CBB1E5B44C3009A94EE /* iPadCellVC.swift */; };
 		089A0CBE1E5B44C3009A94EE /* iPadCellVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089A0CBC1E5B44C3009A94EE /* iPadCellVC.xib */; };
+		089A0CC01E5B482B009A94EE /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A0CBF1E5B482B009A94EE /* FeedData.swift */; };
+		089A0CC21E5B4842009A94EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 089A0CC11E5B4842009A94EE /* Default-568h@2x.png */; };
 		7E55A3CE9265317F433D1FB1 /* Pods_grability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B5B7E2751A173457A5CF07 /* Pods_grability.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089A0C851E5B3898009A94EE /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089A0C881E5B3898009A94EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		089A0C8A1E5B3898009A94EE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		089A0C8D1E5B3898009A94EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089A0C901E5B3898009A94EE /* grability.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = grability.xcdatamodel; sourceTree = "<group>"; };
 		089A0C921E5B3898009A94EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089A0C951E5B3898009A94EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +31,8 @@
 		089A0CB61E5B446C009A94EE /* iPhoneListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iPhoneListVC.xib; path = iPhoneViews/iPhoneListVC.xib; sourceTree = "<group>"; };
 		089A0CBB1E5B44C3009A94EE /* iPadCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPadCellVC.swift; path = iPadViews/iPadCellVC.swift; sourceTree = "<group>"; };
 		089A0CBC1E5B44C3009A94EE /* iPadCellVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = iPadCellVC.xib; path = iPadViews/iPadCellVC.xib; sourceTree = "<group>"; };
+		089A0CBF1E5B482B009A94EE /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedData.swift; path = Helpers/FeedData.swift; sourceTree = "<group>"; };
+		089A0CC11E5B4842009A94EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		2D6AEEF9E6E62025D6AAEF51 /* Pods-grability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.debug.xcconfig"; sourceTree = "<group>"; };
 		41B5B7E2751A173457A5CF07 /* Pods_grability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82F75C798FD6DD3B3A61A3 /* Pods-grability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.release.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,11 +77,6 @@
 				089A0C9F1E5B3CE7009A94EE /* Helpers */,
 				089A0C9E1E5B3CDD009A94EE /* Models */,
 				089A0C9D1E5B3CD5009A94EE /* ViewControllers */,
-				089A0C8C1E5B3898009A94EE /* Main.storyboard */,
-				089A0C921E5B3898009A94EE /* Assets.xcassets */,
-				089A0C941E5B3898009A94EE /* LaunchScreen.storyboard */,
-				089A0C971E5B3898009A94EE /* Info.plist */,
-				089A0C8F1E5B3898009A94EE /* grability.xcdatamodeld */,
 			);
 			path = grability;
 			sourceTree = "<group>";
@@ -91,7 +86,6 @@
 			children = (
 				089A0CBA1E5B44A1009A94EE /* iPadVC */,
 				089A0CB31E5B4420009A94EE /* iPhoneVC */,
-				089A0C8A1E5B3898009A94EE /* MainVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +100,7 @@
 		089A0C9F1E5B3CE7009A94EE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				089A0CBF1E5B482B009A94EE /* FeedData.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -122,6 +117,11 @@
 		089A0CB11E5B4396009A94EE /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				089A0C921E5B3898009A94EE /* Assets.xcassets */,
+				089A0C941E5B3898009A94EE /* LaunchScreen.storyboard */,
+				089A0C971E5B3898009A94EE /* Info.plist */,
+				089A0C8F1E5B3898009A94EE /* grability.xcdatamodeld */,
+				089A0CC11E5B4842009A94EE /* Default-568h@2x.png */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				089A0C961E5B3898009A94EE /* LaunchScreen.storyboard in Resources */,
 				089A0CB81E5B446C009A94EE /* iPhoneListVC.xib in Resources */,
 				089A0C931E5B3898009A94EE /* Assets.xcassets in Resources */,
-				089A0C8E1E5B3898009A94EE /* Main.storyboard in Resources */,
+				089A0CC21E5B4842009A94EE /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +311,7 @@
 				089A0C911E5B3898009A94EE /* grability.xcdatamodeld in Sources */,
 				089A0CBD1E5B44C3009A94EE /* iPadCellVC.swift in Sources */,
 				089A0CB71E5B446C009A94EE /* iPhoneListVC.swift in Sources */,
-				089A0C8B1E5B3898009A94EE /* MainVC.swift in Sources */,
+				089A0CC01E5B482B009A94EE /* FeedData.swift in Sources */,
 				089A0C891E5B3898009A94EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,14 +319,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		089A0C8C1E5B3898009A94EE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089A0C8D1E5B3898009A94EE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		089A0C941E5B3898009A94EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
