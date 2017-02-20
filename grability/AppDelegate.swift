@@ -17,6 +17,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        var viewController = UIViewController()
+        
+        
+        let device = ( UIDevice.current.userInterfaceIdiom == .pad )
+        
+        if device {
+            let ipadView = iPadCellVC(nibName:"iPadCellVC", bundle: nil)
+            viewController = ipadView
+
+        }else{
+            let iphoneView = iPhoneListVC(nibName:"iPhoneListVC", bundle: nil)
+            viewController = iphoneView
+            // UIDevice.currentDevice().setValue(UIInterfaceOrientation.LandscapeLeft.rawValue, forKey: "orientation")
+
+            UIDevice.current.setValue(UIInterfaceOrientation.portraitUpsideDown.rawValue, forKey: "orientation")
+        }
+        
+        let navegationController = UINavigationController(rootViewController: viewController)
+        let screemBount = UIScreen.main.bounds
+        let windows = UIWindow(frame: screemBount)
+        windows.rootViewController = navegationController
+        windows.makeKeyAndVisible()
+        self.window = windows
+        
+        
+        
         return true
     }
 
