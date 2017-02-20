@@ -63,10 +63,12 @@
 		089A0C871E5B3898009A94EE /* grability */ = {
 			isa = PBXGroup;
 			children = (
+				089A0CB21E5B439D009A94EE /* AppDelegate */,
+				089A0CB11E5B4396009A94EE /* Others */,
+				089A0CB01E5B4389009A94EE /* Views */,
 				089A0C9F1E5B3CE7009A94EE /* Helpers */,
 				089A0C9E1E5B3CDD009A94EE /* Models */,
 				089A0C9D1E5B3CD5009A94EE /* ViewControllers */,
-				089A0C881E5B3898009A94EE /* AppDelegate.swift */,
 				089A0C8A1E5B3898009A94EE /* MainVC.swift */,
 				089A0C8C1E5B3898009A94EE /* Main.storyboard */,
 				089A0C921E5B3898009A94EE /* Assets.xcassets */,
@@ -96,6 +98,28 @@
 			children = (
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		089A0CB01E5B4389009A94EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		089A0CB11E5B4396009A94EE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		089A0CB21E5B439D009A94EE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				089A0C881E5B3898009A94EE /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		16E25481043A29FC6A31F7DC /* Frameworks */ = {
@@ -406,6 +430,7 @@
 				089A0C9C1E5B3898009A94EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
