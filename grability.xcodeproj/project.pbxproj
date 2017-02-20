@@ -56,6 +56,9 @@
 		089A0C871E5B3898009A94EE /* grability */ = {
 			isa = PBXGroup;
 			children = (
+				089A0C9F1E5B3CE7009A94EE /* Helpers */,
+				089A0C9E1E5B3CDD009A94EE /* Models */,
+				089A0C9D1E5B3CD5009A94EE /* ViewControllers */,
 				089A0C881E5B3898009A94EE /* AppDelegate.swift */,
 				089A0C8A1E5B3898009A94EE /* MainVC.swift */,
 				089A0C8C1E5B3898009A94EE /* Main.storyboard */,
@@ -65,6 +68,27 @@
 				089A0C8F1E5B3898009A94EE /* grability.xcdatamodeld */,
 			);
 			path = grability;
+			sourceTree = "<group>";
+		};
+		089A0C9D1E5B3CD5009A94EE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		089A0C9E1E5B3CDD009A94EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		089A0C9F1E5B3CE7009A94EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
