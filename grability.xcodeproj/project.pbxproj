@@ -158,6 +158,7 @@
 		089A0CB31E5B4420009A94EE /* iPhoneVC */ = {
 			isa = PBXGroup;
 			children = (
+				089A0CD31E5D01C6009A94EE /* iPhoneTableViewCell.swift */,
 				089A0CB51E5B446C009A94EE /* iPhoneListVC.swift */,
 			);
 			name = iPhoneVC;
@@ -167,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				089A0CB61E5B446C009A94EE /* iPhoneListVC.xib */,
-				089A0CD31E5D01C6009A94EE /* iPhoneTableViewCell.swift */,
 				089A0CD41E5D01C6009A94EE /* iPhoneTableViewCell.xib */,
 			);
 			name = iPhoneViews;
