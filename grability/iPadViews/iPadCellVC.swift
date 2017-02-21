@@ -174,8 +174,26 @@ extension iPadCellVC : UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let obj = appData[indexPath.row]
-        print(obj)
+        let data = appData[indexPath.row]
+        
+        let imgURL: NSURL = NSURL(string: data.value(forKey: "imageUrl") as! String)!
+        let request: NSURLRequest = NSURLRequest(url: imgURL as URL)
+        
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) { (response, data, error) -> Void in
+            if error == nil {
+                let mydata = self.appData[indexPath.row]
+                
+                let details = iPadDetailVC.init(withdata: (mydata.value(forKey: "name") as! String?)!,
+                                                price: (mydata.value(forKey: "price") as! String?)!,
+                                                date: (mydata.value(forKey: "releaseDate") as! String?)!,
+                                                category: (mydata.value(forKey: "category") as! String?)!,
+                                                sumary: (mydata.value(forKey: "sumary") as! String?)!,
+                                                image: UIImage(data: data!)!)
+                details.modalPresentationStyle = .currentContext
+                self.present(details, animated: true, completion: nil)
+            }
+        }
+        
         //ModelController.managerApp.insertEntry(obj)
         //let details = DetailsViewController()
         //self.navigationController?.pushViewController(details, animated: true)
