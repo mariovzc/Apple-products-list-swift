@@ -43,6 +43,7 @@ class iPadDetailVC: UIViewController {
     init(withdata name: String, price: String, date: String, category: String, sumary: String, image: UIImage) {
         super.init(nibName: nil, bundle: nil)
         imgApp = image
+        priceApp = price == "0.00000" ? "Gratis" : price
         nameApp = name
         dateApp = date
         categoryApp = category
