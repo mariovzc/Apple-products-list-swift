@@ -13,6 +13,9 @@ class iPhoneTableViewCell: UITableViewCell {
     @IBOutlet weak var appImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    let heigthCell:CGFloat = 80.0;
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
