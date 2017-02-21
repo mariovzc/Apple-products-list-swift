@@ -24,13 +24,23 @@
                         <outlet property="delegate" destination="-1" id="ULa-48-Xrc"/>
                     </connections>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-8m-aEf">
+                    <items>
+                        <navigationItem title="Title" id="XgV-mT-rCw">
+                            <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="RiF-u7-7PR"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="EBs-2V-CGb" secondAttribute="bottom" id="1T3-AZ-oHZ"/>
+                <constraint firstItem="RiG-8m-aEf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="HXn-5N-Oux"/>
                 <constraint firstAttribute="trailing" secondItem="EBs-2V-CGb" secondAttribute="trailing" id="LQk-gE-v6Z"/>
-                <constraint firstItem="EBs-2V-CGb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="i4F-1W-am7"/>
+                <constraint firstItem="EBs-2V-CGb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="i4F-1W-am7"/>
                 <constraint firstItem="EBs-2V-CGb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n6w-3A-iGo"/>
+                <constraint firstAttribute="trailing" secondItem="RiG-8m-aEf" secondAttribute="trailing" constant="1" id="r1Z-5L-yv5"/>
+                <constraint firstItem="RiG-8m-aEf" firstAttribute="bottom" secondItem="EBs-2V-CGb" secondAttribute="top" id="sHc-TL-FGI"/>
             </constraints>
             <point key="canvasLocation" x="33" y="80"/>
         </view>
