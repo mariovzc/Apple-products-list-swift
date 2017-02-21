@@ -3,7 +3,6 @@
 //  Dentsio sim
 //
 //  Created by Mario Vizcaino on 1/10/17.
-//  Copyright © 2017 Saludtec Sas. All rights reserved.
 //
 
 import SystemConfiguration
