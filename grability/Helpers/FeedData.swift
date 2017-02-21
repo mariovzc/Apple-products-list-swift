@@ -15,7 +15,7 @@ class FeedData {
     
     var appData: [NSManagedObject] = []
     func updateInfo( handleComplete:(()->())){
-        let url = "https://itunes.apple.com/us/rss/topfreeapplications/limit=2/json"
+        let url = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
         Alamofire.request(url).responseString { response in
             let json = JSON(data: response.data!)
             for (_,subJson):(String, JSON) in json {
