@@ -43,13 +43,13 @@ extension iPhoneListVC{
     }
     func navigationBar() {
         
-        let btn1 = UIButton(type: .custom)
-        btn1.setImage(UIImage(named: "refresh"), for: .normal)
-        btn1.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        btn1.addTarget(self, action: #selector(refresh), for: .touchUpInside)
-        let item1 = UIBarButtonItem(customView: btn1)
+        let navbtn = UIButton(type: .custom)
+        navbtn.setImage(UIImage(named: "refresh"), for: .normal)
+        navbtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        navbtn.addTarget(self, action: #selector(refresh), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: navbtn)
         self.navigationItem.rightBarButtonItem = item1
-        self.navigationItem.title = "Iphone View"
+        self.navigationItem.title = "iPhone View"
 
     }
     func displayData() {
