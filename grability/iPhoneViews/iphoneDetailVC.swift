@@ -28,7 +28,8 @@ class iphoneDetailVC: UIViewController {
         appPrice.text = priceApp
         appDate.text = dateApp
         appSumary.text = sumaryApp
-
+        
+        appStyle()
         // Do any additional setup after loading the view.
     }
     init(withdata name: String, price: String, date: String, sumary: String, image: UIImage) {
@@ -39,6 +40,14 @@ class iphoneDetailVC: UIViewController {
         dateApp = date
         sumaryApp = sumary
         
+    }
+    func appStyle() {
+        appImage.layer.cornerRadius = 15
+        appImage.clipsToBounds = true
+        
+        appSumary!.layer.borderWidth = 0.5
+        appSumary!.layer.borderColor = UIColor.gray.cgColor
+        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
     }
     
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
