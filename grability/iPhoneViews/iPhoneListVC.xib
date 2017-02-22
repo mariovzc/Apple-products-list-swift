@@ -17,31 +17,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EBs-2V-CGb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="EBs-2V-CGb">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="mLu-VM-paf"/>
                         <outlet property="delegate" destination="-1" id="ULa-48-Xrc"/>
                     </connections>
                 </tableView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-8m-aEf">
-                    <items>
-                        <navigationItem title="Title" id="XgV-mT-rCw">
-                            <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="RiF-u7-7PR"/>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="EBs-2V-CGb" secondAttribute="bottom" id="1T3-AZ-oHZ"/>
-                <constraint firstItem="RiG-8m-aEf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="HXn-5N-Oux"/>
                 <constraint firstAttribute="trailing" secondItem="EBs-2V-CGb" secondAttribute="trailing" id="LQk-gE-v6Z"/>
-                <constraint firstItem="EBs-2V-CGb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="i4F-1W-am7"/>
+                <constraint firstItem="EBs-2V-CGb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="i4F-1W-am7"/>
                 <constraint firstItem="EBs-2V-CGb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n6w-3A-iGo"/>
-                <constraint firstAttribute="trailing" secondItem="RiG-8m-aEf" secondAttribute="trailing" constant="1" id="r1Z-5L-yv5"/>
-                <constraint firstItem="RiG-8m-aEf" firstAttribute="bottom" secondItem="EBs-2V-CGb" secondAttribute="top" id="sHc-TL-FGI"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <point key="canvasLocation" x="33" y="80"/>
         </view>
     </objects>
