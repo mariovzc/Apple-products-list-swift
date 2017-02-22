@@ -23,9 +23,23 @@ class iPadCellVC: UIViewController {
         registerCellInTable()
         // Do any additional setup after loading the view.
         initialData()
+        navigationBar()
         
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        initialData()
+    }
+    
+
+}
+extension iPadCellVC{
+    
     func initialData(){
         if #available(iOS 10.0, *) {
             getData{() -> () in
@@ -45,7 +59,7 @@ class iPadCellVC: UIViewController {
                                     self.collectionView.reloadData()
                                     
                                 }
-
+                                
                             })
                         }
                     }
@@ -54,38 +68,27 @@ class iPadCellVC: UIViewController {
             }
         }
     }
-    @IBAction func refreshButtonAction() {
-        displayData()
-        collectionView.reloadData()
-        initialData()
-
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        initialData()
-    }
+    
     func registerCellInTable() {
         let nib:UINib = UINib(nibName: "IpadCellCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func refresh(){
+        displayData()
+        self.collectionView.reloadData()
+        initialData()
     }
-    */
-
-}
-extension iPadCellVC{
+    func navigationBar() {
+        
+        let navbtn = UIButton(type: .custom)
+        navbtn.setImage(UIImage(named: "refresh"), for: .normal)
+        navbtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        navbtn.addTarget(self, action: #selector(refresh), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: navbtn)
+        self.navigationItem.rightBarButtonItem = item1
+        self.navigationItem.title = "iPad View"
+        
+    }
     
     func displayData() {
         if #available(iOS 10.0, *) {
@@ -135,7 +138,7 @@ extension iPadCellVC : UICollectionViewDataSource{
     
     func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
-        let cellSize:CGSize = CGSize(width: 200, height: 280)
+        let cellSize:CGSize = CGSize(width: 320, height: 90)
         return cellSize
     }
     
@@ -149,14 +152,7 @@ extension iPadCellVC : UICollectionViewDataSource{
         
         cell.appTittle.text =  data.value(forKey: "name") as! String?
         let price = (data.value(forKey: "price") as! String?)!
-        if (price == "0.00000"){
-            cell.appPrice.text  = "GRATIS"
-        }else{        
-           cell.appPrice.text = "\(data.value(forKey: "price")!)  \(data.value(forKey: "currency")!)"
-
-        }
-        
-        
+        cell.appPrice.text = price == "0.00000" ? "Gratis" : price        
         NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) { (response, data, error) -> Void in
             
             if error == nil {
