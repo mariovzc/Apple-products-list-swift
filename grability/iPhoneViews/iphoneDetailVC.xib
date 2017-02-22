@@ -58,7 +58,7 @@
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-o8-WFs">
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <items>
-                        <navigationItem title="Title" id="GRE-Kf-oHz">
+                        <navigationItem id="GRE-Kf-oHz">
                             <barButtonItem key="leftBarButtonItem" image="back" id="sqA-1b-NJV">
                                 <connections>
                                     <action selector="backButtonAction:" destination="-1" id="UIY-JX-JKz"/>
