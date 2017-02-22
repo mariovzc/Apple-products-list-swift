@@ -35,9 +35,16 @@ class iPadDetailVC: UIViewController {
         appDate.text = dateApp
         appCategory.text = categoryApp
         appSumary.text = sumaryApp
+        appStyle()
+    }
+    
+    func appStyle() {
         appImage.layer.cornerRadius = 15
         appImage.clipsToBounds = true
-
+        
+        appSumary!.layer.borderWidth = 0.5
+        appSumary!.layer.borderColor = UIColor.gray.cgColor
+        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
     }
 
     init(withdata name: String, price: String, date: String, category: String, sumary: String, image: UIImage) {
@@ -45,8 +52,8 @@ class iPadDetailVC: UIViewController {
         imgApp = image
         priceApp = price == "0.00000" ? "Gratis" : price
         nameApp = name
-        dateApp = date
-        categoryApp = category
+        dateApp = "Fecha de salida: \(date)"
+        categoryApp = "Categoria: \(category)"
         sumaryApp = sumary
     
     }
