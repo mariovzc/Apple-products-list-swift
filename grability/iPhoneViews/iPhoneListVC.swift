@@ -8,20 +8,26 @@
 
 import UIKit
 import CoreData
+import ElasticTransition
 
 class iPhoneListVC: UIViewController {
 
     let cellIdentifier = "cellIphone"
+    
     var appData: [NSManagedObject] = []
+
     let feed  = FeedData()
 
+    var transition = ElasticTransition()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCellInTable()
         initialData()
         navigationBar()
-        // Do any additional setup after loading the view.
+        transition.stiffness = 1
+        transition.edge = .top
+        transition.sticky = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -183,7 +189,8 @@ extension iPhoneListVC : UITableViewDelegate {
                                                 date: (mydata.value(forKey: "releaseDate") as! String?)!,
                                                 sumary: (mydata.value(forKey: "sumary") as! String?)!,
                                                 image: UIImage(data: data!)!)
-                details.modalPresentationStyle = .currentContext
+                details.transitioningDelegate = self.transition
+                details.modalPresentationStyle = .custom
                 self.present(details, animated: true, completion: nil)
             }
         }

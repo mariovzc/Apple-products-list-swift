@@ -8,22 +8,26 @@
 
 import UIKit
 import CoreData
-
+import ElasticTransition
 class iPadCellVC: UIViewController {
     
     let cellIdentifier = "customCell"
 
     var appData: [NSManagedObject] = []
 
-    @IBOutlet weak var collectionView: UICollectionView!
     let feed  = FeedData()
+    
+    var transition = ElasticTransition()
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCellInTable()
-        // Do any additional setup after loading the view.
         initialData()
         navigationBar()
+        transition.stiffness = 1
+        transition.edge = .top
+        transition.sticky = false
         
     }
 
@@ -185,7 +189,8 @@ extension iPadCellVC : UICollectionViewDelegate{
                                                 category: (mydata.value(forKey: "category") as! String?)!,
                                                 sumary: (mydata.value(forKey: "sumary") as! String?)!,
                                                 image: UIImage(data: data!)!)
-                details.modalPresentationStyle = .currentContext
+                details.transitioningDelegate = self.transition
+                details.modalPresentationStyle = .custom
                 self.present(details, animated: true, completion: nil)
             }
         }
