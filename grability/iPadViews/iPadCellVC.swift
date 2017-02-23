@@ -142,7 +142,7 @@ extension iPadCellVC : UICollectionViewDataSource{
     
     func collectionView(collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
-        let cellSize:CGSize = CGSize(width: 320, height: 90)
+        let cellSize:CGSize = CGSize(width: 260, height: 90)
         return cellSize
     }
     
