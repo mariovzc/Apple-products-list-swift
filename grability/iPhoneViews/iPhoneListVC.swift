@@ -148,13 +148,7 @@ extension iPhoneListVC : UITableViewDataSource {
         
         cell.nameLabel.text =  data.value(forKey: "name") as! String?
         let price = (data.value(forKey: "price") as! String?)!
-        if (price == "0.00000"){
-            cell.priceLabel.text  = "GRATIS"
-        }else{
-            cell.priceLabel.text = "\(data.value(forKey: "price")!)  \(data.value(forKey: "currency")!)"
-            
-        }
-        
+        cell.priceLabel.text = price == "0.00000" ? "Gratis" : price        
         
         NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) { (response, data, error) -> Void in
             
