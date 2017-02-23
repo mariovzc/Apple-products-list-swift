@@ -27,6 +27,7 @@ class iPhoneTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     override func layoutSubviews() {
+        //Rounded image View
         appImageView.layer.cornerRadius = 15
         appImageView.clipsToBounds = true
         

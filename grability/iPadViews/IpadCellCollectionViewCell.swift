@@ -23,6 +23,7 @@ class IpadCellCollectionViewCell: UICollectionViewCell {
     }
 
     override func layoutSubviews() {
+        //rounder Image View
         appImage.layer.cornerRadius = 15
         appImage.clipsToBounds = true
 

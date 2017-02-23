@@ -27,25 +27,9 @@ class iPadDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        appImage.image = imgApp
-        appName.text = nameApp
-        appPrice.text = priceApp
-        appDate.text = dateApp
-        appCategory.text = categoryApp
-        appSumary.text = sumaryApp
-        appStyle()
+        setupView()
     }
     
-    func appStyle() {
-        appImage.layer.cornerRadius = 15
-        appImage.clipsToBounds = true
-        
-        appSumary!.layer.borderWidth = 0.5
-        appSumary!.layer.borderColor = UIColor.gray.cgColor
-        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
-    }
 
     init(withdata name: String, price: String, date: String, category: String, sumary: String, image: UIImage) {
         super.init(nibName: nil, bundle: nil)
@@ -70,4 +54,27 @@ class iPadDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+}
+//MARK: - VIEW GENERAL METHODS
+extension iPadDetailVC{
+    func setupView(){
+        //Setup Data for the view
+        appImage.image = imgApp
+        appName.text = nameApp
+        appPrice.text = priceApp
+        appDate.text = dateApp
+        appCategory.text = categoryApp
+        appSumary.text = sumaryApp
+        
+        //Styles of the View
+        viewStyle()
+    }
+    func viewStyle() {
+        appImage.layer.cornerRadius = 15
+        appImage.clipsToBounds = true
+        
+        appSumary!.layer.borderWidth = 0.5
+        appSumary!.layer.borderColor = UIColor.gray.cgColor
+        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
+    }
 }

@@ -22,12 +22,8 @@ class iPhoneListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCellInTable()
-        initialData()
-        navigationBar()
-        transition.stiffness = 1
-        transition.edge = .top
-        transition.sticky = false
+        //CAll all the methods to show data and style the view
+        setupView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +37,23 @@ class iPhoneListVC: UIViewController {
     }
 }
 
+//MARK: - SETUP INITIAL DATA
 extension iPhoneListVC{
+    func setupView(){
+        if (self.currentReachabilityStatus == .notReachable) {
+            alert(message: "No tienes conexion a internet")
+        }
+        //Register the cell name
+        registerCellInTable()
+        //load the data
+        initialData()
+        //setup the navigationbar
+        navigationBar()
+        //set the transition animations
+        transition.stiffness = 1
+        transition.edge = .top
+        transition.sticky = false
+    }
     func refresh(){
         displayData()
         self.tableView.reloadData()
@@ -99,7 +111,7 @@ extension iPhoneListVC{
                     tableView.reloadData()
                 }else{
                     if (self.currentReachabilityStatus == .notReachable) {
-                        alert(message: "Please check your internet connection and try again")
+                        alert(message: "No tienes conexion a internet")
                         return
                     }else{
                         feed.cleanDB()
@@ -120,6 +132,7 @@ extension iPhoneListVC{
         }
     }
 }
+//MARK:  - UITABLE VIEW DATASOURCE AND DELEGATE
 extension iPhoneListVC : UITableViewDataSource {
     
     private func numberOfSectionsInTableView(tableView: UITableView) -> Int {

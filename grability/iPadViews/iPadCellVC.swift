@@ -22,12 +22,9 @@ class iPadCellVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCellInTable()
-        initialData()
-        navigationBar()
-        transition.stiffness = 1
-        transition.edge = .top
-        transition.sticky = false
+        
+        //setup ALL THE THINGS IN THE VIEW
+        setupView()
         
     }
 
@@ -42,8 +39,24 @@ class iPadCellVC: UIViewController {
     
 
 }
+//MARK: - MAIN FUNCTIONS
 extension iPadCellVC{
-    
+    func setupView(){
+        if (self.currentReachabilityStatus == .notReachable) {
+            alert(message: "No tienes conexion a internet")
+        }
+        // REGISTER THE CELL
+        registerCellInTable()
+        // SETUP INITIAL DATA
+        initialData()
+        // SETUP NAVIGATION BAR
+        navigationBar()
+        
+        //SETUP TRANSITION
+        transition.stiffness = 1
+        transition.edge = .top
+        transition.sticky = false
+    }
     func initialData(){
         if #available(iOS 10.0, *) {
             getData{() -> () in
@@ -52,7 +65,7 @@ extension iPadCellVC{
                     collectionView.reloadData()
                 }else{
                     if (self.currentReachabilityStatus == .notReachable) {
-                        alert(message: "Please check your internet connection and try again")
+                        alert(message: "No tienes conexion a internet")
                         return
                     }else{
                         feed.cleanDB()
@@ -129,6 +142,7 @@ extension iPadCellVC{
     
 }
 
+//MARK: - COLLECTION VIEW DATASOURCE AND DELEGATE
 
 extension iPadCellVC : UICollectionViewDataSource{
     

@@ -23,14 +23,7 @@ class iphoneDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appImage.image = imageApp
-        appName.text = nameApp
-        appPrice.text = priceApp
-        appDate.text = dateApp
-        appSumary.text = sumaryApp
-        
-        appStyle()
-        // Do any additional setup after loading the view.
+        setupView()
     }
     init(withdata name: String, price: String, date: String, sumary: String, image: UIImage) {
         super.init(nibName: nil, bundle: nil)
@@ -41,14 +34,7 @@ class iphoneDetailVC: UIViewController {
         sumaryApp = sumary
         
     }
-    func appStyle() {
-        appImage.layer.cornerRadius = 15
-        appImage.clipsToBounds = true
-        
-        appSumary!.layer.borderWidth = 0.5
-        appSumary!.layer.borderColor = UIColor.gray.cgColor
-        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
-    }
+    
     
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -61,5 +47,26 @@ class iphoneDetailVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+extension iphoneDetailVC{
+    func setupView(){
+        //Setup data for the View
+        appImage.image = imageApp
+        appName.text = nameApp
+        appPrice.text = priceApp
+        appDate.text = dateApp
+        appSumary.text = sumaryApp
+        
+        //Setup view Styles
+        viewStyle()
+    }
+    func viewStyle() {
+        appImage.layer.cornerRadius = 15
+        appImage.clipsToBounds = true
+        
+        appSumary!.layer.borderWidth = 0.5
+        appSumary!.layer.borderColor = UIColor.gray.cgColor
+        appSumary!.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
     }
 }
